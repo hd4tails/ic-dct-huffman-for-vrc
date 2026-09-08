@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: IC_DCTHCapacityPrepassVerticalBlit
+  m_Shader: {fileID: 4800000, guid: 2c633459c7e08114881ff79e2dfd512b, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _QuantReciprocalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _QuantTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleBlockMapTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SamplePreviousDcTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _EncodeSrgb: 1
+    - _InputIsRawStorage: 1
+    - _PlaneMode: 3
+    - _SourceTextureSrgb: 1
+    m_Colors:
+    - _CoeffSize: {r: 128, g: 64, b: 0, a: 0}
+    - _SampleBlockCount: {r: 16, g: 8, b: 128, a: 0}
+    - _SampleMapSize: {r: 128, g: 1, b: 0, a: 0}
+    - _SourceBlockCount: {r: 64, g: 64, b: 0, a: 0}
+    - _SourceSize: {r: 512, g: 512, b: 0, a: 0}
+  m_BuildTextureStacks: []
