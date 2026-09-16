@@ -154,6 +154,13 @@ Shader "HDAssets/IC/DCTH/DCTHHuffmanPayloadGatherBlit"
 
             float ReadMipRegionByteSum(float2 mipPixel, int mipLevel)
             {
+                // 長方形やNPOTのchunk配置では、範囲外の子を0byteとして探索から除外する
+                float2 levelSize = max(ceil(_ChunkCount.xy / Pow2Small(mipLevel)), 1.0.xx);
+                if (any(mipPixel < 0.0) || any(mipPixel >= levelSize))
+                {
+                    return 0.0;
+                }
+
                 float byteSum = 0.0;
 
                 // level 0とatlas側の読み取り結果を、初期化済みの同じ戻り値へ代入する

@@ -8300,7 +8300,8 @@ namespace HDAssets.ImageCompress.Dcth
                     return;
                 }
 
-                if (!IsDecodeSlotGroupStepSourceMain(idctStepCount))
+                // 水平IDCTで上書きされる前の中間値を、開始時の1回だけworkへ保存する
+                if (decodeLocalIndex == idctStepCount + 1 && !IsDecodeSlotGroupStepSourceMain(idctStepCount))
                 {
                     TrackedBlit(reconstructedFromHuffmanPayload, work);
                 }

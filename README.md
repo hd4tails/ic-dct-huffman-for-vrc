@@ -1,6 +1,6 @@
 # DCTH for VRC
 
-バージョン: v1.0.0
+バージョン: v1.1.0
 
 VRChat Worldの実行時に、TextureをDCT・量子化・RLE・Huffman符号化した独自byte列へ圧縮し、そのbyte列からTextureを復元するライブラリです。
 
@@ -287,3 +287,9 @@ Prefabの初期値は4 MiB（4,194,304 bytes）です。
 ## リポジトリ
 
 `https://github.com/hd4tails/ic-dct-huffman-for-vrc.git`
+
+## v1.1.0の変更
+
+- 長方形やchunk数が2の累乗ではない画像で、圧縮payloadの一部が誤った領域から収集される問題を修正しました。
+- IDCTの行分割数が奇数になる画像で、中間値の再コピーにより復元画像の一部が崩れる問題を修正しました。
+- byte列の形式と容量、量子化・Huffman設定は変更していません。
